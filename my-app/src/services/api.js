@@ -12,7 +12,7 @@ export const fetchBooksByQuery = async (query) => {
   return data.docs;
 };
 
-export const fetchJamesNondBooks = () => fetchBooksBuQuerry('James Bond');
+export const fetchJamesNondBooks = () => fetchBooksByQuerry('James Bond');
 
 
   
