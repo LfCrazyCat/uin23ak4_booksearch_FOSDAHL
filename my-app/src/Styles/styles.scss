@@ -1,0 +1,12 @@
+//    src/Styles    //  Egenladet SASS stil //
+
+import React from 'react';
+
+function MyComponent() {
+  return (
+    <div className="black-text large-text">
+    Denne vil føre at teksten er sort med 28px 
+    </div>
+  );
+}
+
