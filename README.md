@@ -26,6 +26,8 @@ Jeg oppretter en 'components'-mappe under 'src'-mappen, der jeg oppretter en fil
 Export default etterfulgt av App, BookCard eller hvilket komponent som står etter de to ordene vil si at den skal eksport som den typen. 
 
 Lager en mappe som kalles for Styles, der vil det inneholde filer som går ut på style som skal implementeres i prosjektet. 
-Denne vil ligge under src-mappen.  
+Denne vil ligge under src-mappen. 
+
+Lager en mappe under src-mappen, som jeg kaller for pages. 
   
 
