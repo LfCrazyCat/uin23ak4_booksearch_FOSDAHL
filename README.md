@@ -9,12 +9,17 @@ Jeg jobber i src-mappen UIN23AK4_BOOKSEARCH_FOSDSAHL/my-app/src/
 Men når jeg forklarer videre, så brukes kun de siste mappe-strukturene og ikke hele navnet. 
 Mappestrukturen er utført på best mulig organisering og det som vurderes til å være best practices for React. 
 
- my-app/src = mappen jeg hovedsakelig jobber med 
- my-app/src/services = mappen som jeg har opprettet
- my-app/src/services/api.js = filen silen api.js er opprettet. 
+ *  my-app/src = mappen jeg hovedsakelig jobber med 
+ *  my-app/src/services = mappen som jeg har opprettet
+ *  my-app/src/services/api.js = filen *api.js* opprettet
+ *  my-app/src/components = mappe jeg opprettet for komponenter
+ *  my-app/src/components/BookCard.js = BookCard komponentet her
 
- api.js er en seperat tjenestefil som håndterer API-kallet. 
- Så vil jeg bruke API funksjonen i React-komponentet, her kan jeg velge hvilken komponent som jeg føler for passer og går foreøløpig for å opprette App.js til å bruke 'useState' og 'useEffect' hooks til håndtering av staten og andre sideeffekter.   
+ *api.js* er en seperat tjenestefil som håndterer API-kallet. 
+ Så vil jeg bruke API funksjonen i React-komponentet, her kan jeg velge hvilken komponent som jeg føler for passer og går foreøløpig for å opprette *App.js*'til å bruke 'useState' og 'useEffect' hooks til håndtering av staten og andre sideeffekter.  
+
+Jeg oppretter en 'components'-mappe under 'src'-mappen, der jeg oppretter en fil med som heter *BookCard.js*. Komponenten vil ta 'book'-prop for å returnere JSX for å vise informasjonen til boken. 
+
 
   
 
