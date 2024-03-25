@@ -20,6 +20,10 @@ Mappestrukturen er utført på best mulig organisering og det som vurderes til �
 
 Jeg oppretter en 'components'-mappe under 'src'-mappen, der jeg oppretter en fil med som heter *BookCard.js*. Komponenten vil ta 'book'-prop for å returnere JSX for å vise informasjonen til boken. 
 
+*APP.js* som er opprettet importerer jeg komponentene som er fra 'react', fetching av boken fra 'api.js, import av BookCard med komponentene i 'BookCard.js' -filen. 
+
+
+Export default etterfulgt av App, BookCard eller hvilket komponent som står etter de to ordene vil si at den skal eksport som den typen. 
 
   
 
