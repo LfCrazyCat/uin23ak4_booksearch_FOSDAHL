@@ -1,2 +1,3 @@
 # uin23ak4_booksearch_FOSDAHL
  
+Etter at jeg har brukt kommandoen npx creact-next-app@latest, oppretter jeg en en ny tjeneste-fil for API. Kort fortalt er et API et sett med regler, verktøy og protokoller for å bygge progrmavare applikasjoner. Kan tenkes om en type bro eller mellomslag som godtar to applikasjoner til å kommunisere med hverandre. Spiller en viktig rolle for utvikle programvare for å tillate ulike systemer og tjenester som kan integerere og jobbe sammen. 
