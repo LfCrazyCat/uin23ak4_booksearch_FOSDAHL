@@ -1,8 +1,18 @@
 // pages/index.js
-import React, { useState, useEffect } from 'react';
-import { fetchJamesBondBooks } from '@/services/api';
+import React from 'react';
+import bookCardStyles from '../Styles/BookCard.module.css';
+import containerStyles from '../Styles/Container.module.css';
 import BookCard from '../components/BookCard';
-// under her mp import styles from ... står //
+
+export default function Home({ books }) {
+  return (
+    <div className={containerStyles.container}>
+      {books.map((book, index) => (
+        <bookCard key={index} book={book} className={bookCardStyles}
+       )}
+    </div>
+  )
+}
 
 export default function Home() {
   const [books, setBooks] = useState([]);
@@ -12,11 +22,11 @@ export default function Home() {
   }, []);
   
    return (
-    <div className={StyleSheet.container}>
-      {/*  Annet innhold og evt søkefelt */ }
+    <div className={Style.container}>
+      /*  Annet innhold og evt søkefelt */ 
       {books.map((book, index) => (
         <BookCard key={index} book={book} />
       ))}
     </div>
    );
-}
+      }

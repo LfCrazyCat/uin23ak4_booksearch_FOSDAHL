@@ -1,15 +1,20 @@
 // src/components/BookCard.js //
 
-function BookCard({ book }) {
+import React from 'react';
+import Styles from '../Styles/BookCard.module.css';
+
+const BookCard = ({ book }) => {
+   // her kommer JSX inn, som viser boksens informasjon
   return (
-    <li>
+    <div className={styles.bookCard}>
       <h3>{book.title}</h3>
-      <p>Author: {book.author_name ? book.author_name.join(', ') : 'Unknown'}'</p>
+      <p>Forfatter: {book.author_name ? book.author_name.join(', ') : 'Ukjent'}</p>
       {book.cover_i && (
-        <img src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`} alt={`Cover of ${book.title}`} />
+        <img src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`} alt={`Omslag av ${book.title}`} />
       )}
-    </li>
+    </div>
   );
-}
+};
 
 export default BookCard;
+
