@@ -1,7 +1,7 @@
 // src/components/BookCard.js //
 
 import React from 'react';
-import Styles from '../Styles/BookCard.module.css';
+import styles from '../Styles/BookCard.module.css';
 
 const BookCard = ({ book }) => {
    // her kommer JSX inn, som viser boksens informasjon

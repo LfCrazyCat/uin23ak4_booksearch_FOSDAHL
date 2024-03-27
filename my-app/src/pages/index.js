@@ -22,7 +22,7 @@ export default function Home() {
   }, []);
   
    return (
-    <div className={Style.container}>
+    <div className={Styles.container}>
       /*  Annet innhold og evt søkefelt */ 
       {books.map((book, index) => (
         <BookCard key={index} book={book} />
