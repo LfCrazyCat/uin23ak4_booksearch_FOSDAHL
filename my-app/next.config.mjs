@@ -1,8 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['covers.openlibrary.org'], // Må legge til tillattelse fra Open Library
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'covers.openlibrary.org',
+      },
+    ],
   },
 };
 
 export default nextConfig;
+
+
+// Kommentert bort: domains: ['covers.openlibrary.org']
