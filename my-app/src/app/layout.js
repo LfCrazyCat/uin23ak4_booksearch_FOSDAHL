@@ -10,10 +10,7 @@ function handleSearch(e) {
   console.log(e.target.value); //søkelogikken
 }
 
-export const metadata = {
-  title: "Book Search",
-  description: "Boksøk for arbeidskrav 4 i UIN",
-};
+
 
 export default function Layout({ children }) {
   return (
