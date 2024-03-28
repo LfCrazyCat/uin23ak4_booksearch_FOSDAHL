@@ -1,7 +1,7 @@
 // src/pages/_app.js 
-
-import Layout from '../app/layout';
 import '../styles/globals.css';
+import Layout from '../app/layout';
+
 
 function MyApp({ Component, pageProps }) {
   return (
