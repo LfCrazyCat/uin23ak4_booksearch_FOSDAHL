@@ -1,7 +1,7 @@
 import React from 'react';
 import BookCard from '../components/BookCard';
 import { fetchJamesBondBooks } from '../services/api';
-import bookCardStyle from '../Styles/BookCard.module.css';
+import bookCardStyle from '../styles/BookCard.module.css';
 import containerStyles from '../styles/Container.module.css';
 
 export async function getStaticProps() {

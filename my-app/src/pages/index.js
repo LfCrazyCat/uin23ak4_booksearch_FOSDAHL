@@ -1,7 +1,7 @@
 // pages/index.js
 import React from 'react';
-import bookCardStyles from '../Styles/BookCard.module.css';
-import containerStyles from '../Styles/Container.module.css';
+import bookCardStyles from '../styles/BookCard.module.css';
+import containerStyles from '../styles/Container.module.css';
 import BookCard from '../components/BookCard';
 import { fetchJamesBondBooks } from '../services/api';
 
