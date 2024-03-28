@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Styles from '../Styles/BookCard.module.css'; 
-import Styles from '../Styles/Container.module.css';
+import bookCardStyles from '../styles/BookCard.module.css'; 
+import containerStyles from '../styles/Container.module.css';
 
 export default function Home() {
   return (
