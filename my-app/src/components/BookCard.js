@@ -20,7 +20,6 @@ const BookCard = ({ book }) => {
                 alt={`Omslag av ${book.title}`}
                 width={width}
                 height={height}
-                layout="responsive"
               />
       )}
     </div>
