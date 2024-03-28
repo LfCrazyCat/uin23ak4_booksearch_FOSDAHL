@@ -1,5 +1,9 @@
 // pages/index.js
-import React from 'react';
+import React, { useState } from 'react';
+import SearchBar from '../components/SearchBar';
+import BookList from '../components/BookList';
+import SearchResults from '../components/SearchResults'; 
+
 import bookCardStyles from '../styles/BookCard.module.css';
 import containerStyles from '../styles/Container.module.css';
 import BookCard from '../components/BookCard';
