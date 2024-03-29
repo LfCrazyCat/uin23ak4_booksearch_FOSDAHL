@@ -2,43 +2,27 @@
 import { Inter } from "next/font/google";
 import { metadata } from '../utils/metadata';
 
-
 const inter = Inter({ subsets: ["latin"] });
-
-// funksjon for håndterer søkemulighet
-function handleSearch(e) {
-  console.log(e.target.value); //søkelogikken
-}
-
-
 
 export default function Layout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{metadata.title}</title>
       </head>
       <body className={inter.className}>
-        {/* Søkefelth her */}
-        <div style={{ padding: '20px' }}>
-        <input 
-        type="text"
-        placeholder="Minst tre tegn.."
-        onChange={handleSearch}
-        />
-        </div>
-
         <main>
-          {/* For hovedinnhold, vil være ulik for hver side */}
+          {/* Dette er hovedinnholdet og vil være ulikt for hver side */}
           {children}
         </main>
 
-        <footer>
-          {/* Footer */}
+        <footer style={{ marginTop: '20px', padding: '20px', textAlign: 'center' }}>
+          {/* Footer-innhold */}
           <p>{metadata.description}</p>
         </footer>
       </body>
     </html>
-    );
-  }
-  
+  );
+}

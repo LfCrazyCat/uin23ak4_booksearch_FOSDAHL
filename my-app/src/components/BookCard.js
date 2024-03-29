@@ -1,30 +1,35 @@
-// src/components/BookCard.js //
-
 import React from 'react';
 import Image from 'next/image';
-import bookCardStyles from '../styles/BookCard.module.css';
 
 const BookCard = ({ book }) => {
-
-  const width = 200;
-  const height = 300; 
-   // her kommer JSX inn, som viser boksens informasjon
+  // Sørg for at URL-en konstrueres riktig med template literals
+  const amazonSearchUrl = book.amazon_id
+    ? `https://www.amazon.com/s?k=${book.amazon_id}`
+    : null;
 
   return (
-    <div className={bookCardStyles.bookCard}>
-      <h3>{book.title}</h3>
+    <div style={{ border: '1px solid #ddd', padding: '10px', marginBottom: '10px' }}>
+      <h2>{book.title}</h2>
       <p>Forfatter: {book.author_name ? book.author_name.join(', ') : 'Ukjent'}</p>
+      <p>Publisert: {book.first_publish_year}</p>
+      <p>Rating: {book.average_rating ? `${book.average_rating} / 5` : 'Ikke tilgjengelig'}</p> {/* Antar at rating er skalaen 0 til 5 */}
       {book.cover_i && (
-                <Image 
-                src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
-                alt={`Omslag av ${book.title}`}
-                width={width}
-                height={height}
-              />
+        <Image
+          src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
+          alt={`Omslag av boken ${book.title}`}
+          width={200}
+          height={300}
+          unoptimized={true}
+        />
+      )}
+      {amazonSearchUrl && (
+        <button onClick={() => window.open(amazonSearchUrl, '_blank')}>
+          Kjøp på Amazon
+        </button>
       )}
     </div>
   );
 };
 
 export default BookCard;
-
+      
