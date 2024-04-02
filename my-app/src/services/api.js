@@ -2,8 +2,9 @@
 
 const BASE_URL = 'https://openlibrary.org';
 
-// Definer funksjonen som skal hente bøker basert på en søkefrase
+// Søk etter bøker basert på en søkefrase
 export const fetchBooksByQuery = async (query) => {
+  // Riktig bruk av backticks og fjern ekstra linje med 'const url'
   const url = `${BASE_URL}/search.json?q=${encodeURIComponent(query)}&fields=title,author_name,publish_date,cover_i,amazon_id`;
   const response = await fetch(url);
   if (!response.ok) {
@@ -13,7 +14,7 @@ export const fetchBooksByQuery = async (query) => {
   return data.docs;
 };
 
-// Hjelpefunksjon for å hente James Bond-bøker
+// Hente James Bond-bøker ved å bruke hjelpefunksjonen
 export const fetchJamesBondBooks = async () => {
   return fetchBooksByQuery('James Bond');
 };
