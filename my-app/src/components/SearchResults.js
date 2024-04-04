@@ -5,8 +5,8 @@ import BookCard from '../components/BookCard';
 const SearchResults = ({ books }) => {
   return (
     <div>
-      {books.map(book => (
-        <BookCard key={book.key} book={book} />
+      {books.map((book, index) => (
+        <BookCard key={index} book={book} />
       ))}
     </div>
   );

@@ -2,19 +2,17 @@
 
 const BASE_URL = 'https://openlibrary.org';
 
-// Søk etter bøker basert på en søkefrase
-export const fetchBooksByQuery = async (query) => {
-  // Riktig bruk av backticks og fjern ekstra linje med 'const url'
-  const url = `${BASE_URL}/search.json?q=${encodeURIComponent(query)}&fields=title,author_name,publish_date,cover_i,amazon_id`;
-  const response = await fetch(url);
+export const searchBooksByTitle = async (title) => {
+  const response = await fetch(`${BASE_URL}/search.json?title=${encodeURIComponent(title)}`);
   if (!response.ok) {
     throw new Error('Network response was not ok');
   }
   const data = await response.json();
-  return data.docs;
-};
-
-// Hente James Bond-bøker ved å bruke hjelpefunksjonen
-export const fetchJamesBondBooks = async () => {
-  return fetchBooksByQuery('James Bond');
+  return data.docs.map((doc) => ({
+    title: doc.title,
+    publishYear: doc.publish_date ? doc.publish_date[0] : 'Unknown', // Første år boken ble publisert
+    authorName: doc.author_name ? doc.author_name.join(', ') : 'Unknown',
+    averageRating: doc.average_rating || 'Not available', // Bør undersøkes om gjennomsnittlig rating, ikke alltid direkte tilgjengelig fra OpenLibrarys API
+    amazonId: doc.amazon_id // Ikke alltid tilgjengelig og er ikke dokumentert i OpenLibrarys API, men hvis responsen, kan den bruke det sånn
+  }));
 };
