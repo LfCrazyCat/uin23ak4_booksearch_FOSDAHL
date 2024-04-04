@@ -10,10 +10,10 @@ export const fetchBooksByQuery = async (query) => {
     throw new Error('Network response was not ok');
   }
   const data = await response.json();
-  return data.docs; // Returnerer en array av bok-objekter basert på søkefrasen
+  return data.docs; // Returnerer en array av bok-objekter basert på søket
 };
 
-// Eksempel på hvordan du kan eksportere en spesifikk funksjon for å hente James Bond bøker
+// Kan eksportere spesifikk funksjon for å hente James Bond bøker
 export const fetchJamesBondBooks = async () => {
   return fetchBooksByQuery('James Bond');
 };

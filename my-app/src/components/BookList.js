@@ -1,12 +1,23 @@
 // src/components/BookList.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { fetchJamesBondBooks } from '../services/api';
 import BookCard from '../components/BookCard';
 
-const BookList = ({ books }) => {
+const BookList = () => {
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    const loadBooks = async () => {
+      const booksFromApi = await fetchJamesBondBooks();
+      setBooks(booksFromApi);
+    };
+
+    loadBooks();
+  }, []);
+
   return (
     <div>
       {books.map((book, index) => (
-        // Kompoent for en enkel bok, inkl tittel, pub.år mm
         <BookCard key={index} book={book} />
       ))}
     </div>
