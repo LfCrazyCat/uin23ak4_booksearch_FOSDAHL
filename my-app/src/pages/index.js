@@ -19,23 +19,25 @@ const Home = () => {
   }, []);
 
   const handleSearchChange = async (query) => {
-    console.log('Search query:', query);
-    setSearchQuery(query);
-
-    if (query.length >= 3) {
-      setIsSearchActive(true);
-      // Utfør API-kall for å hente bøker basert på søkefrasen
-      const results = await fetchBooksByQuery(query);
-      console.log('Search results:', results);
-      setBooks(results);
-    } else {
-      setIsSearchActive(false);
-      // Reset bøkene til James Bond-bøkene hvis søkefeltet er tomt eller mindre enn tre tegn
-      const jamesBondBooks = await fetchJamesBondBooks();
-      setBooks(jamesBondBooks);
+    try {
+      console.log('Search query:', query);
+      setSearchQuery(query);
+  
+      if (query.length >= 3) {
+        setIsSearchActive(true);
+        const results = await fetchBooksByQuery(query);
+        console.log('Search results:', results);
+        setBooks(results);
+      } else {
+        setIsSearchActive(false);
+        const jamesBondBooks = await fetchJamesBondBooks();
+        setBooks(jamesBondBooks);
+      }
+    } catch (error) {
+      console.error('Error fetching books:', error);
+      // Håndter feilen her, f.eks. ved å sette en feilmelding i tilstanden og vise den til brukeren- men det hjelper ikke
     }
   };
-
   return (
     <div>
       <SearchBar value={searchQuery} onChange={handleSearchChange} />

@@ -10,6 +10,7 @@ export const fetchBooksByQuery = async (query) => {
     throw new Error('Network response was not ok');
   }
   const data = await response.json();
+  console.log(data);
   return data.docs; // Returnerer en array av bok-objekter basert på søket
 };
 
