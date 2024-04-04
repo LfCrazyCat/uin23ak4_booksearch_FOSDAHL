@@ -6,7 +6,7 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 
   --primary-glow: conic-gradient(
@@ -25,12 +25,12 @@
   --tile-start-rgb: 239, 245, 249;
   --tile-end-rgb: 228, 232, 233;
   --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
+    #bd989880,
+    #a3909040,
     #00000030,
-    #00000020,
+    #1e8b6120,
     #00000010,
-    #00000010,
+    #ece8ee10,
     #00000080
   );
 
@@ -70,6 +70,12 @@
     --callout-border-rgb: 108, 108, 108;
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+
   }
 }
 
