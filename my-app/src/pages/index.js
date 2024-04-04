@@ -26,6 +26,7 @@ const Home = () => {
       setIsSearchActive(true);
       // Utfør API-kall for å hente bøker basert på søkefrasen
       const results = await fetchBooksByQuery(query);
+      console.log('Search results:', results);
       setBooks(results);
     } else {
       setIsSearchActive(false);
@@ -46,5 +47,7 @@ const Home = () => {
     </div>
   );
 };
+
+
 
 export default Home;
