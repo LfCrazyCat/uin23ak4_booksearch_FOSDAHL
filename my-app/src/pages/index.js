@@ -19,6 +19,7 @@ const Home = () => {
   }, []);
 
   const handleSearchChange = async (query) => {
+    console.log('Search query:', query);
     setSearchQuery(query);
 
     if (query.length >= 3) {

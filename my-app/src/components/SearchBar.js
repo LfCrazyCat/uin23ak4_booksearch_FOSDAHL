@@ -1,7 +1,7 @@
 // I SearchBar-komponenten
 const SearchBar = ({ value, onChange }) => {
   const handleChange = (event) => {
-    // Sender kun verdien videre, ikke hele event-objektet
+    console.log(event.target.value);
     onChange(event.target.value);
   };
 
