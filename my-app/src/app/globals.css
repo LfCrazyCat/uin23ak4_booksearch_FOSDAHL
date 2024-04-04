@@ -73,11 +73,7 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
 
-  }
-}
 
 * {
   box-sizing: border-box;

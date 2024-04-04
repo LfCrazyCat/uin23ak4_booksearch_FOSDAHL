@@ -9,7 +9,7 @@ const BookCard = ({ book }) => {
       <p>Publisert: {book.publishYear}</p>
       <p>Rating: {book.averageRating}</p>
       {book.amazonId && (
-        <button onClick={() => window.open(`https://www.amazon.com/s?k=${book.amazonId}`, '_blank')}>
+        <button onClick={() => window.open(`https://www.amazon.com/s?k=0395082544${book.amazonId}`, '_blank')}>
           Søk på Amazon
         </button>
       )}
