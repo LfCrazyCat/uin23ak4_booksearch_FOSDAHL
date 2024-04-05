@@ -1,0 +1,26 @@
+.header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.main {
+  padding: 1rem;
+  background: #d5d6a0;
+}
+
+.aside {
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

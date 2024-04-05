@@ -1,6 +1,7 @@
 // I SearchBar-komponenten
 import React from 'react';
 
+
 const SearchBar = ({ value, onChange }) => {
   const handleChange = (event) => {
     console.log('Search query:', event.target.value);
@@ -10,7 +11,6 @@ const SearchBar = ({ value, onChange }) => {
   return (
     <input
       type="text"
-      id="searchInput"
       value={value}
       onChange={handleChange}
       placeholder="Søk..."

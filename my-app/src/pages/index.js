@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchBooksByQuery, fetchJamesBondBooks } from '../services/api'; // Enkel import her
 import SearchBar from '../components/SearchBar';
 import BookList from '../components/BookList';
+import BookCard from '../components/BookCard';
 
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState('');
