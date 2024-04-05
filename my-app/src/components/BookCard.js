@@ -1,3 +1,4 @@
+// src/components/BookCard.js 
 import React from 'react';
 import Image from 'next/image';
 
@@ -7,10 +8,10 @@ const BookCard = ({ book }) => {
 
   return (
     <div style={{ 
-      maxWidth: '150px',
+      maxWidth: '300px',
       margin: '10px',
-      border: '1px solid #ddd',
-      padding: '10px',
+      border: '3px solid #ddd',
+      padding: '0px',
       boxShadow: '0 2px 4px rgba(0,0,0,0.1)'  }}>
        <h3>{book.title}</h3>
       <p>Forfatter: {book.author_name ? book.author_name.join(', ') : 'Ukjent'}</p>
