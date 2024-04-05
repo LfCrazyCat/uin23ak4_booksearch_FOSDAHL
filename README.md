@@ -29,5 +29,16 @@ Lager en mappe som kalles for Styles, der vil det inneholde filer som går ut p�
 Denne vil ligge under src-mappen. 
 
 Lager en mappe under src-mappen, som jeg kaller for pages. 
-  
 
+
+  Minstekravene: 
+
+React-app opprettet, som henter og lister opp James Bond bøker på forsiden med bruk av OpenLibrarys API (vist i komponenten 'Home' og med funksjonen 'fetchJamesBondBooks'. 
+Implementert søkefunksjonen i komponenten 'Home', der søkefrasen håndteres- og søket blir utført via 'fetchBooksByQuery'. 
+'SearchResults'-komponenten kan brukes til å vise søkeresultatene i 'BookCard'-komponenter. 
+'BookCard'-komponenten viser informasjon om hver bok. 
+
+HTML-strukuren kan sees i layout.js filen, som i Layout.module.css har designet på. 
+
+* For å bestemme regler for søkeresultat, ligger disse i index.js.
+* if (query.lenght >= 3) gjør at det det ikke godtas input som har færre enn tre tegn og vil derfor iikke vise resultater. 
