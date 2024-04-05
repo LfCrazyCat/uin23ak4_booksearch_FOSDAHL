@@ -1,8 +1,9 @@
+// for å vise til James Bond filmer eller bøker, men ikke nødvendig
+
 import React from 'react';
 import BookCard from '../components/BookCard';
 import { fetchJamesBondBooks } from '../services/api';
-import bookCardStyle from '../styles/BookCard.module.css';
-import containerStyles from '../styles/Container.module.css';
+
 
 export async function getStaticProps() {
   const books = await fetchJamesBondBooks();
@@ -15,7 +16,7 @@ export async function getStaticProps() {
 
 const JamesBondBooks = ({ books }) => {
   return  (
-    <div className={containerStyles.conmtainer}>
+    <div className={containerStyles.container}>
       {books.map((book, index) => (
         <bookCard key={index} book={book} className={bookCardStyle.bookCard} />
         ))}

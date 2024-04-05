@@ -29,11 +29,23 @@ const BookCard = ({ book }) => {
               </div>
         
       )}
+{/* linke til Amazon kan gjøres på disse to måtene */}
+{book.amazon_id && (
+  <a 
+    href={`https://www.amazon.com/s?k=${book.amazon_id}`} 
+    target="_blank" 
+    rel="noopener noreferrer"
+    style={{ display: 'inline-block', marginTop: '10px', textDecoration: 'none', color: 'white', backgroundColor: '#007600', padding: '10px', borderRadius: '5px' }}>
+    Søk på Amazon
+  </a>
+)}
+
             {book.amazon_id && (
         <button onClick={() => window.open(`https://www.amazon.com/s?k=${book.amazon_id}`, '_blank')}>
           Søk på Amazon
         </button>
       )}
+
     </div>
   );
 };

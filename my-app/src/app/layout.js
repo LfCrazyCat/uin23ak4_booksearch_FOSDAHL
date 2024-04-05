@@ -8,7 +8,7 @@ export default function Layout({ children }) {
     <>
     <header className={styles.header}>
       <h1>Boksøk</h1>
-      {/* Eventuelle navigasjonslinker */}
+      {/* Eventuelle navigasjonslinker for semantisk innhold */}
     </header>
     <main className={styles.main}>
       {children}
