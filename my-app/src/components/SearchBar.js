@@ -5,7 +5,6 @@ import styles from '../app/SearchBar.module.css';
 
 const SearchBar = ({ value, onChange }) => {
   const handleChange = (event) => {
-    console.log('Search query:', event.target.value);
     onChange(event.target.value);
   };
 
