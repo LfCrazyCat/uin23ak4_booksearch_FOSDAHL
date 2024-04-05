@@ -1,5 +1,6 @@
 // I SearchBar-komponenten
 import React from 'react';
+import styles from '../app/SearchBar.module.css';
 
 
 const SearchBar = ({ value, onChange }) => {
@@ -13,7 +14,8 @@ const SearchBar = ({ value, onChange }) => {
       type="text"
       value={value}
       onChange={handleChange}
-      placeholder="Søk..."
+      placeholder="Søk etter film eller bok..."
+      className={styles.searchInput}
     />
   );
 };

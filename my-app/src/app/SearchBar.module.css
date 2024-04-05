@@ -1,0 +1,8 @@
+/* SearchBar.module.css */
+.searchInput {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #4bdbd4;
+  border-radius: 4px;
+  width: calc(100% - 22px); /* Kompenserer for padding og border */
+}
