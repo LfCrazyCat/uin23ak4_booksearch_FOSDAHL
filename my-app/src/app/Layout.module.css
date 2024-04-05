@@ -24,3 +24,19 @@
   bottom: 0;
   width: 100%;
 }
+
+/* Responsitvt, media queries */
+@media (max-width: 768px) {
+  .header, .footer {
+    text-align: left;
+    padding: 0.5rem;
+  }
+
+  .main, .aside {
+    padding: 0.5rem;
+  }
+
+  .footer {
+    position: relative;
+  }
+}
